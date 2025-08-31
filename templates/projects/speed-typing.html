@@ -1,0 +1,18 @@
+{% extends "project_layout.html" %}
+
+{% block title %}Speed Typing Game{% endblock %}
+
+{% block default %}
+
+<h1 class="text-center mt-4">Speed Typing Game</h1>
+<div class="container mt-4">
+    <p>Try to type the words as fast as you can</p>
+    <p>Let`s see how fast you can type</p>
+    <a href="/projects/speed-typing/play" class="btn btn-primary">Play</a>
+    {%endblock %}
+</div>
+
+
+{% block scripts %}
+<script src="/static/js/speed-typing.js"></script>
+{% endblock scripts %}

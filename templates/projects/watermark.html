@@ -1,0 +1,49 @@
+{%extends 'project_layout.html'%}
+{% block title %}
+{% if title %}{{ title }}{% else %}Watermark Project{% endif %}
+{% endblock %}
+
+{% block success %}
+            <form action="/projects/watermark/get_image" method="get">
+            <h1 class="text-center text-white">Watermark applied successfully!</h1>
+            <button
+                    type="submit"
+                    method="get"
+                    class="btn btn-primary w-25 mx-auto"
+                    action="/projects/watermark/get_image"
+                    id="getImage">Get Watermarked Image
+            </button>
+        </form>
+{%endblock %}
+{% block default %}
+        <h1>Watermark Project</h1>
+        <p>This project is a simple implementation of the watermarking technique.</p>
+        <p>It allows you to embed a watermark text into another image and extract the watermark image from the original image.</p>
+        <form
+            class="col-md-12 text-center text-white p-4 rounded w-50 mx-auto"
+            method="post"
+            enctype="multipart/form-data"
+    >
+        <input
+                type="text"
+                name="watermark_text"
+                class="form-control mb-3 mx-auto"
+                required
+                placeholder="Enter watermark text here..."/>
+        <input
+                type="file"
+                name="image"
+                accept="image/*"
+                class="form-control mb-3 "
+                max-size="10485760"
+                required>
+        <button type="submit" class="btn btn-primary" id="uploadButton">Upload</button>
+    </form>
+{%endblock%}
+
+{% block scripts %}
+<script src="/static/js/watermark.js"></script>
+{% endblock %}
+
+
+

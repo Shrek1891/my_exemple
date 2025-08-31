@@ -1,0 +1,23 @@
+<div class="card mb-3 data-index-{{card_index}}" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{{card_image}}" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{card_title}}</h5>
+                <p class="card-text">{{card_text}}</p>
+                <p class="card-text text-muted center"> {% for language in languages %}
+                    <span class="badge bg-primary">{{language}}</span>
+                    {% endfor %}</p>
+                <p class="card-text"><small class="text-muted">
+                    {% if card_url %}
+                    <a href="{{card_url}}" class="btn btn-primary">View Project</a>
+                    {% else %}
+                    <span>No menu items available</span>
+                    {% endif %}
+                </small></p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{%extends 'project_layout.html'%}
+{% block title %}
+{% if title %}{{ title }}{% else %}Game {% endif %}
+{% endblock %}
+
+{% block default %}
+<h1>Old Game</h1>
+<p>This small game used pygame library</p>
+<p>History: Little boy was presented new handy. And he wanted to play and didn't want to do homework  </p>
+<p>Dad was very angry and wanted to throw it out </p>
+<p>Try to catch it</p>
+<p>Try it out!</p>
+<a href="/projects/game/play" class="btn btn-primary" target="_blank" >Play</a>
+{%endblock %}

@@ -1,0 +1,35 @@
+{%extends "layout.html"%}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<h1 class="about-title">Projects</h1>
+<div class="carousel-container">
+    <button class="nav-arrow left">‹</button>
+    {% for key in projects.keys() %}
+    {% set project = projects[key] %}
+    {% set menu_items = project.menu_items %}
+    {% set card_title = project.name %}
+    {% set card_text = project.description %}
+    {% set card_image = project.image %}
+    {% set card_url = project.url %}
+    {% set languages = project.languages %}
+    {% set card_index = loop.index0 %}
+
+
+    {% include "card.html" %}
+    {% endfor %}
+    <button class="nav-arrow right">›</button>
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/projects.js"></script>
+{% endblock scripts %}
+
+
+
+
+

@@ -1,0 +1,18 @@
+{%extends 'project_layout.html'%}
+{% block title %}
+{% if title %}{{ title }}{% else %}Tic Tac Toe Project{% endif %}
+{% endblock %}
+{% block default%}
+
+<h1>Tic Tac Toe Project</h1>
+<h3 id="player">Player 1</h3>
+<button class="btn btn-primary" id="reset" >Start a new game</button>
+<div id="gameBoard" class="mt-4" >
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/tic-tac-toe.js"></script>
+{% endblock scripts %}

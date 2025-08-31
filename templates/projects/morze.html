@@ -1,0 +1,67 @@
+{% extends 'project_layout.html' %}
+{% block title %}
+{% if title %}{{ title }}{% else %}Morze Project{% endif %}
+{% endblock %}
+
+
+{% block error%}
+<div class="alert alert-danger" role="alert">
+    {{ error_message }}
+</div>
+{% endblock %}
+{% block success %}
+<p>Your result is:</p>
+<div class="col-md-12 text-center">
+    <div class="alert alert-success" role="alert" id="textToCopy">
+        {{morze_text }}
+    </div>
+    <div class="flex justify-reverse gap-2">
+        <button type="button" class="btn btn-primary" id="copyButton">copy</button>
+    </div>
+</div>
+{% endblock %}
+{% block default %}
+<h1>Morze Project</h1>
+<p>This project is a simple implementation of the Morse code translator.</p>
+<p>It allows you to convert text to Morse code and vice versa.</p>
+<p>
+    <bold>Enter your text on English below and click the "Translate" button to see the result.</bold>
+</p>
+<p>Try it out!</p>
+<form method="post"/>
+<div class="form-group mb-3">
+    <label for="inputText">Input Text</label>
+    <textarea
+            class="form-control mt-2"
+            id="inputText" name="morze_text"
+            rows="4"
+            required
+            placeholder="Enter your text here..."></textarea>
+</div>
+<div class=" mb-3 flex flex-row justify-center gap-2">
+    <input
+            type="radio"
+            class="form-check-input mr-2 ml-2"
+            checked name="translateType"
+            value="Translate to morze"
+    >Translate to morze</input>
+    <span class="mx-2"></span>
+    <input
+            type="radio"
+            class="form-check-input ml-2"
+            name="translateType"
+            value="Translate from morze"
+    >Translate from morze</input>
+</div>
+<button type="submit" class="btn btn-primary" id="translateButton">Translate</button>
+</form>
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/morze.js">
+</script>
+{% endblock scripts %}
+
+
+
+
+

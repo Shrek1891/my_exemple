@@ -1,0 +1,20 @@
+{%extends 'project_layout.html'%}
+{% block title %}
+{% if title %}{{ title }}{% else %}Speed typing game{% endif %}
+{% endblock %}
+{% block default%}
+
+<h1>Speed typing game</h1>
+<div class="container-fluid mt-4">
+    <div id="text-to-type">
+
+    </div>
+    <div id="message" class="mt-4 text-center text-[#00FF00] fs-3" ></div>
+    <button class="btn btn-primary" id="startButton" hidden>Start again</button>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/speed-typing.js"></script>
+{% endblock scripts %}
