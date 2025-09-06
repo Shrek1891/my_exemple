@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center text-white">
+            <h1>Welcome to the My Page</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center mt-4">
+            <p class="lead text-white">Hi,I`m Alex, a Python and JS developer</p>
+            <p class="text-white lead mb-4">
+                Welcome to the home page! This is a simple Flask application that demonstrates my mini projects.
+            </p>
+        </div>
+    </div>
+    <div class="text-center mb-4 text-white">
+        <p>
+            This page is designed to showcase my skills and projects. Feel free to explore the links below to see
+            more of my work.
+        </p>
+    </div>
+    <div class="d-flex mb-4 flex justify-content-center align-items-center gap-4">
+        <a href="/projects" class="neon">Projects</a>
+        <a href="/contacts" class="neon">Contacts</a>
+    </div>
+
+</div>
+</div>
+{% endblock %}

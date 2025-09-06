@@ -1,0 +1,16 @@
+{% extends 'project_layout.html' %}
+{% block title %}
+{% if title %}{{ title }}{% else %}AudioBook Project{% endif %}
+{% endblock %}
+{% block default %}
+<h1>AudioBook Project</h1>
+<audio  id="audioPlayer">
+    Your browser does not support the audio element.
+</audio>
+<button id="playButton">Start</button>
+
+{%endblock %}
+
+{% block scripts %}
+<script src="/static/js/audio-book-play.js"></script>
+{% endblock scripts %}

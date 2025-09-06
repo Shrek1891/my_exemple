@@ -1,0 +1,37 @@
+{%extends 'project_layout.html'%}
+{% block title %}
+{% if title %}{{ title }}{% else %}AudioBook Project{% endif %}
+{% endblock %}
+{% block error%}
+<div class="alert alert-danger" role="alert">
+    {{ error_message }}
+</div>
+{% endblock %}
+
+
+{% block default %}
+<h1>AudioBook Project</h1>
+<p>Small project for converting text to audio</p>
+<p>With this project you can create audiobook</p>
+<p>Please upload PDF file</p>
+<form
+        class="col-md-12 text-center text-white p-4 rounded w-50 mx-auto"
+        method="post"
+        enctype="multipart/form-data"
+>
+
+    <input
+            type="file"
+            name="pdf_file"
+            accept="application/pdf"
+            class="form-control mb-3 "
+            max-size="10485760"
+            required
+    >
+    <button type="submit" class="btn btn-primary" id="uploadButton">Upload</button>
+</form>
+{%endblock%}
+
+{% block scripts %}
+<script src="/static/js/audio-book.js"></script>
+{% endblock %}
